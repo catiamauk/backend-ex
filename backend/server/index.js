@@ -28,21 +28,17 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
         }))
   .catch(err => console.log(err));
 
-
-app.get("/", (req, res) => {
-});
-
 //get user / create user if doesn't exist
 app.get("/users/:user_id", (req, res) => {
   const user = User.find({user_id: req.params.user_id}, (err, data) =>{
       let new_user = new User({ user_id: req.params.user_id,
         data: {balance: 1000, product_ids: []}});  
-    if(err){
+      if(err){
         console.log(err);
         return
-    }
-    //se nao existe cria um user
-    if(data.length == 0) {
+      }
+      //se nao existe cria um user
+      if(data.length == 0) {
         console.log("No record found")
         new_user.save()
         .then((result) => {
@@ -71,7 +67,7 @@ app.post("/orders", async (req, res) => {
   let items = req.body.order.items;
   let user_id = req.body.order.user_id;
 
- //get user balance
+  //get user balance
   let user_balance = await User.find({user_id: user_id}, (err, data) => {
     //o que tornar qd só quero o valor?
     //console.log(data[0].data.balance)
@@ -125,4 +121,4 @@ app.post("/orders", async (req, res) => {
       {user_id: user_id},
       { "$addToSet": {"data.product_ids": items } }
     )
-  })
+})
