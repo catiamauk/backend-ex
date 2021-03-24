@@ -21,7 +21,7 @@ app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 
 //connect to mongodb
-const dbURI = 'mongodb+srv://teste:passteste@nodejstut.ojz5d.mongodb.net/node-tuts?retryWrites=true&w=majority';
+const dbURI = 'mongodb+srv://xxxx:xxxx@nodejstut.ojz5d.mongodb.net/node-tuts?retryWrites=true&w=majority';
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(result => app.listen(PORT, () => {
           console.log(`Server listening on ${PORT}`);
