@@ -39,11 +39,17 @@ Let me guide you through how to set it up:
 
 Now you should see something at ```http://localhost:3000```
 
-**Additional Requirements:**
+## Server
+Our Frontend Developer has kindly provided you a simple React app for you to test out your service.
 
+1. Go inside frontend folder : ```cd backend/```
+1. Make sure you have Node installed.
+1. Install npm dependencies: ```npm install```
+1. Run it in development mode: ```npm start```
+
+**Additional Requirements:**
 In development mode, this react app is expecting the local backend service to expose port ```4000```.
 
 ## Setup
-
 For this challenge, please fork this repository, and create your solution inside of it, located inside `backend` folder.
 As soon as you are finished, go ahead and make a Pull Request back to this repository.
