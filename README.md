@@ -47,6 +47,13 @@ Our Frontend Developer has kindly provided you a simple React app for you to tes
 1. Install npm dependencies: ```npm install```
 1. Run it in development mode: ```npm start```
 
+## Existing accounts:
+1. catia
+2. toze
+3. jose
+4. shakira
+5. You can create your own account
+
 **Additional Requirements:**
 In development mode, this react app is expecting the local backend service to expose port ```4000```.
 
